@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+:where(html) {
+  box-sizing: border-box;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  font-weight: normal;
+  font-family: 'Oswald', sans-serif;
+}
+
+:where(ul) {
+  list-style: none;
+}
+
+:where(img, video) {
+  height: auto;
+  max-width: 100%;
+}
+
+:where(iframe) {
+  border: 0;
+}
+
+:where(table) {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html, body {
+  background: #212121;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 300;
+  color: #878787;
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+
+
