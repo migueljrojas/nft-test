@@ -45,4 +45,12 @@ html, body {
   height: 100%;
 }
 
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
