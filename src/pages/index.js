@@ -87,6 +87,13 @@ export default function Home() {
 				x: getCoordinate(300, 600),
 				y: getCoordinate(200, 300)
 			}
+		},
+    {
+			scale: 0,
+			coordinates: {
+				x: getCoordinate(300, 600),
+				y: getCoordinate(200, 300)
+			}
 		}
 	]);
 
@@ -183,9 +190,9 @@ export default function Home() {
 						<h1 className={genClassName('title')}>Welcome to NFT Test</h1>
 						<p className={genClassName('desc')}> - Scroll to navigate -</p>
 					</motion.section>
-					{imageStyles.map((imageStyle, idx) => {
+					{imageStyles.map((imageStyle, idx, arr) => {
 						return (
-							idx > 0 && (
+							idx > 0 && idx < arr.length - 1 && (
 								<motion.div
 									className={genClassName('image')}
 									key={`image-${idx}`}
@@ -206,6 +213,17 @@ export default function Home() {
 							)
 						);
 					})}
+          <motion.section
+						className={genClassName('ending')}
+						style={{
+							...imageStyles[imageStyles.length - 1],
+							rotateX: rotateX,
+							rotateY: rotateY,
+						}}
+					>
+						<h2 className={genClassName('title')}>The End</h2>
+						<p className={genClassName('desc')}> - Thank you -</p>
+					</motion.section>
 				</motion.div>
 
 				<div id='detail'>

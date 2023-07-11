@@ -15,7 +15,8 @@
     align-items: center;
   }
 
-  &__intro {
+  &__intro,
+  &__ending {
     border: 2px solid #fff;
     width: 30%;
     aspect-ratio: 4/3;
@@ -26,6 +27,10 @@
     transition: all .2s ease;
     z-index: 10000;
     background: #323232;
+  }
+
+  &__ending {
+    z-index: 0;
   }
 
   &__image {
